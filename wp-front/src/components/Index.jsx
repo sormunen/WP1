@@ -1,15 +1,15 @@
 import React, {useState} from 'react'
 import Button from 'react-bootstrap/Button'
-import { deleteAllQuotes, resetQuotes } from '../service/apiclient';
+import { deleteAllTopics, updateTopics } from '../service/apiclient';
 
 export default function Index() {
     const [message, setMessage] = useState('')
     const clearServerDb = () => {
-        deleteAllQuotes().then(()=>
+        deleteAllTopics().then(()=>
         setMessage("Quotes emptied"))
     }
     const resetServerDb = () => {
-        resetQuotes().then(()=>
+        updateTopics().then(()=>
         setMessage("Quotes reset"))
     }
     return (

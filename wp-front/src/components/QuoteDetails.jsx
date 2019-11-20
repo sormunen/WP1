@@ -1,21 +1,21 @@
 import React, { Component } from 'react'
-import { fetchSingleQuote, deleteQuoteWithId } from '../service/apiclient'
+import { fetchSingleTopic, deleteTopicWithId } from '../service/apiclient'
 import { Link } from 'react-router-dom'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import Button from 'react-bootstrap/Button'
 
 export default class QuoteDetails extends Component {
-  state = { quote: null }
+  state = { topic: null }
   componentDidMount () {
     const id = this.props.match.params.id
-    fetchSingleQuote(id).then(quote => {
-      this.setState({ quote })
+    fetchSingleTopic(id).then(topic => {
+      this.setState({ topic })
     }).catch(err=> {
-        alert(`Error fetching quote: ${err.message}`)
+        alert(`Error fetching topic: ${err.message}`)
     })
   }
   deleteMe = () => {
-    deleteQuoteWithId(this.state.quote.id).then(async response=>{
+    deleteTopicWithId(this.state.topic.id).then(async response=>{
         if (response.status === 200) {
             window.alert("Deleted");
             this.props.history.push("/quotes");
@@ -29,38 +29,26 @@ export default class QuoteDetails extends Component {
   }
 
   render () {
-    if (!this.state.quote) {
+    if (!this.state.topic) {
       return <p>Loading...</p>
     }
-    const { id, quotetext, author, history } = this.state.quote
+    const { id, title, detail, src } = this.state.topic
     return (
       <div>
-        <h1>Quote #{id}</h1>
+        <h1>Topic #{id}</h1>
         <h3>Details</h3>
         <div>
-          <p className='quotetext'>{quotetext}</p>
-          <p className='author'>{author}</p>
+          <p className='quotetext'>{title}</p>
+          <p className='author'>{detail}</p>
+          <p className='author'>{src}</p>
         </div>
         <ButtonGroup aria-label='Basic example'>
-          <Button variant='secondary' onClick={this.props.history.goBack}>Back</Button>
+         
           <Button variant='danger' onClick={this.deleteMe}>Delete</Button>
         </ButtonGroup>
         <hr />
-        <h3>History</h3>
-        <ul>
-          {history&&history
-            .sort((q1, q2) => q2.time - q1.time)
-            .map(q => {
-              return (
-                <div className='quotehistory' key={q.time}>
-                  <p>Time: {new Date(q.time).toISOString()}</p>
-                  <p>Quotetext: {q.quotetext}</p>
-                  <p>Author: {q.author}</p>
-                </div>
-              )
-            })}
-        </ul>
-        <hr />
+       
+        
         <Link to='/quotes'>Back to all quotes</Link>
       </div>
     )

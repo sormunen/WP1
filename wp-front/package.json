@@ -4,11 +4,11 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "repository": {
-    "url": "https://github.com/sovelto-tommi/jsf19-sanontaharj"
+    "url": "https://github.com/sormunen/WP1"
   },
   "author": {
-    "name": "Tommi",
-    "email": "tommi.terasvirta@sovelto.fi"
+    "name": "Roni",
+    "email": "sormunen.roni@gmail.com"
   },
   "license": "ECL-2.0",
   "dependencies": {

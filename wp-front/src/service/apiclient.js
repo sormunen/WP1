@@ -1,36 +1,36 @@
-const url = '/api/quotes';
+const url = '/api/topics';
 
-export const fetchAllQuotes = () => {
+export const fetchAllTopics = () => {
     return fetch(url)
     .then(resp=>resp.json())
 }
 
-export const fetchSingleQuote = (id) => {
+export const fetchSingleTopic = (id) => {
     return fetch(`${url}/${id}`)
     .then(response => response.json());
 }
 
-export const postQuote = (quote) => {
+export const postTopic = (topic) => {
     return fetch(url,  {
           method: 'POST',
           headers: {'Content-Type': 'application/json' },
-          body: JSON.stringify(quote)
+          body: JSON.stringify(topic)
       })
   }
 
-  export const deleteQuoteWithId = (id) => {
+  export const deleteTopicWithId = (id) => {
     return fetch(`${url}/${id}`,  {
         method: 'DELETE'
     })
   }
   
-  export const resetQuotes = () => {
+  export const updateTopics = () => {
     return fetch('/api/reset',  {
         method: 'put'
     })
   }
 
-  export const deleteAllQuotes = () => {
+  export const deleteAllTopics = () => {
     return fetch(url,  {
         method: 'DELETE'
     })

@@ -9,7 +9,7 @@ export default class Navigation extends Component {
     return (
       <Navbar fixed='top' expand="sm" collapseOnSelect bg='dark' variant='dark'>
           <NavbarBrand>
-            Sanontaharjoitus
+            WP
           </NavbarBrand>
           <Navbar.Toggle aria-controls='quote-navbar-nav' />
           <Navbar.Collapse id='quote-navbar-nav'>
@@ -21,12 +21,12 @@ export default class Navigation extends Component {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link eventKey={2} as={Link} to='/quotes'>
-                QuoteList
+                Topics
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link eventKey={3} as={Link} to='/form'>
-                QuoteForm
+                Add-Topic
               </Nav.Link>
             </Nav.Item>
             </Nav>

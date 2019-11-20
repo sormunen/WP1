@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { postQuote } from '../service/apiclient'
+import { postTopic } from '../service/apiclient'
 
 export default class QuoteForm extends Component {
     state = {quotetext: '', author: ''}
@@ -15,7 +15,7 @@ export default class QuoteForm extends Component {
           window.alert("Quote must contain text");
           return;
         }
-        postQuote(this.state).then(response=> {
+        postTopic(this.state).then(response=> {
           // this.setState({quotetext: '', author: ''});
           this.props.history.push('/quotes');
         })
