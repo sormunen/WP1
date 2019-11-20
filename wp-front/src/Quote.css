@@ -1,0 +1,31 @@
+.Quote {
+    color: rgb(4, 115, 100);
+    padding: 0.1em 0.5em;
+  }
+  
+  .quoteid {
+    display: block;
+    float: right;
+  }
+  
+  .quoteid::after {
+    clear: both;
+  }
+  
+  .Quote:nth-of-type(2n) {
+    background-color: lightgreen;
+  }
+  .Quote:nth-of-type(2n+1) {
+    background-color: aquamarine;
+  }
+  
+  .Quote .quotetext {
+    font-style: italic;
+    font-size: 1.2em;
+  }
+  
+  .Quote .author {
+    font-weight: bold;
+    margin-left: 1em;
+  }
+  

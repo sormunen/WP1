@@ -1,0 +1,75 @@
+body {
+  background-color: rgb(4, 115, 100);
+}
+
+.App {
+  color: white;
+  padding: 0.1em 0.5em;
+}
+
+.MainContent {
+  margin-top: 60pt;
+}
+
+.AppComponent {
+  width: 95%;
+  margin: 1em auto;
+}
+
+.Index .message {
+  font-size: 1.4em;
+  color: lightseagreen;
+}
+
+.Index .btn {
+  padding-top: 2pt;
+  padding-bottom: 2pt;
+}
+
+.QuoteForm form {
+  border: 1pt solid lightgreen;
+  border-radius: 10pt;
+  padding: 1em;
+  width: 95%;
+}
+
+.QuoteForm label {
+  display: inline-block;
+  vertical-align: top;
+  width: 8em;
+}
+
+.QuoteForm input[type=submit] {
+  background-color: rgb(4, 115, 100);
+  color: white;
+  border-color: lightgreen;
+  padding: 0.4em 1em;
+  
+}
+ .QuoteForm .buttonp {
+   display: flex;
+   direction: rtl;
+ }
+
+.inputrow input, textarea {
+  width: 60%;
+}
+
+.linkspan {
+  color: blue;
+}
+
+.linkspan:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.quotehistory {
+  border: 1pt solid lightgreen;
+  width: 90%;
+  padding: 0.3em;
+}
+
+.pagination{
+  margin-top: 1em;
+}
