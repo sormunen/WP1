@@ -12,7 +12,9 @@
   },
   "license": "ECL-2.0",
   "dependencies": {
+    "radium": "^0.26.0",
     "react": "^16.11.0",
+    "react-animations": "^1.0.0",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",

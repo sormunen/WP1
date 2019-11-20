@@ -25,10 +25,10 @@ export default class QuoteForm extends Component {
       <div className="QuoteForm AppComponent">
         <form>
           <p className="inputrow">
-            <label htmlFor='form_quotetext'>Quote</label>
+            <label htmlFor='form_quotetext'>Title</label>
             <textarea
               type='text'
-              placeholder='quote'
+              placeholder='Title'
               id='form_quotetext'
               value={this.state.quotetext}
               onChange={this.handleQuoteChange}
@@ -36,10 +36,10 @@ export default class QuoteForm extends Component {
             />
           </p>
           <p className="inputrow">
-            <label htmlFor='form_author'>Author</label>
+            <label htmlFor='form_author'>Description</label>
             <input
               type='text'
-              placeholder='Name'
+              placeholder='Description'
               id='form_author'
               autoComplete='off'
               value={this.state.author}
